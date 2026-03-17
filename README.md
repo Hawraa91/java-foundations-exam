@@ -1,6 +1,6 @@
 ## Name: Hawraa Ali Alsaffar
 
-This is an emplyee management system created using java
+This is an employee management system created using java
 
 
 
