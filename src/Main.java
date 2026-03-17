@@ -22,18 +22,45 @@ public class Main {
 
 
         System.out.println("\n=== PART B: Employee Manager ===");
-        // TODO: Create an EmployeeManager
-        // TODO: Create and add at least 3 employees to it
-        // TODO: Demonstrate findById (found + not found)
-        // TODO: Demonstrate getEmployeesByDepartment
+        //Create an EmployeeManager
+        EmployeeManager EmpManager = new EmployeeManager();
+        // Create and add at least 3 employees to it
+        Employee emp1 = new Employee(1, "Sara", "Engineering", 5000);
+        Employee emp2 = new Employee(2, "Hasan", "Marketing", 4500);
+        Employee emp3 = new Employee(3, "Ali", "Engineering", 5500);
 
+        EmpManager.addEmployee(emp1);
+        EmpManager.addEmployee(emp2);
+        EmpManager.addEmployee(emp3);
+
+
+        // Demonstrate findById 
+        //found
+        System.out.println("Found employee with ID 1: " + EmpManager.findById(1).getName());
+
+
+        // Demonstrate getEmployeesByDepartment
+        System.out.println("Employees in Engineering:");    
+        for (Employee emp : EmpManager.getEmployeesByDepartment("engineering")) {
+            System.out.println(" - " + emp.getName());
+        }
 
         System.out.println("\n=== PART C: Inheritance & Polymorphism ===");
-        // TODO: Create at least 1 Manager and 1 Intern
-        // TODO: Add all employees (Employee, Manager, Intern) to the manager
-        // TODO: Loop through getAllEmployees() and call getBonus() on each
-        //       Print: "<name> bonus: <amount>" for each one
-        //       This demonstrates polymorphism — same method call, different behavior
+        //Create at least 1 Manager and 1 Intern
+        Manager manager1 = new Manager(5, "Khalid", "HR", 6000, 5);
+        Intern intern1 = new Intern(4, "Ahmed", "IT", 1200, "UOB");
+
+        //Add all employees (Employee, Manager, Intern) to the manager
+        EmpManager.addEmployee(manager1);
+        EmpManager.addEmployee(intern1);
+
+        // Loop through getAllEmployees() and call getBonus() on each
+        for (Employee emp : EmpManager.getAllEmployees()) {
+            System.out.println(emp.getName() + " bonus: " + emp.getBonus());
+        }
+        //Print: "<name> bonus: <amount>" for each one
+        //This demonstrates polymorphism — same method call, different behavior
+
 
 
         System.out.println("\n=== PART D: Exception Handling ===");
