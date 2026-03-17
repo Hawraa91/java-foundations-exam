@@ -14,7 +14,7 @@ public class Main {
 
         System.out.println("=== PART A: Salary Utilities ===");
         //Test all 4 SalaryUtils methods and print results
-        // Example:
+        // Example: done
         System.out.println("Annual salary: " + SalaryUtils.calculateAnnualSalary(3000));
         System.out.println("Tax on 25000: " + SalaryUtils.calculateTax(25000));
         System.out.println("Net salary: " + SalaryUtils.calculateNetSalary(25000));

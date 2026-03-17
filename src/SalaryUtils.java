@@ -66,7 +66,7 @@ public class SalaryUtils {
     }
 
     /**
-     * Apply a percentage raise to a current salary. 
+     * Apply a percentage raise to a current salary. done
      * Formula: currentSalary * (1 + percentRaise / 100)
      *
      * Example: applyRaise(3000, 10) → 3300.0  (10% raise on 3000)
